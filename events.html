@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
 </head>
-<body>
-    
+<h1>Event Management</h1>
+  <h2>Upcoming Events (Next 7 Days)</h2>
+  <table id="eventsTable">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Music fest</td>
+        <td>2024-5-10</td>
+        <td>Thika</td>
+      </tr>
+      <tr>
+      <td>Book launch</td>
+      <td>2024-6-12</td>
+      <td>Mombasa</td>
+      </tr>
+      <tr>
+        <td>Fashion week</td>
+        <td>2024-7-10</td>
+        <td>Kikuyu</td>
+      </tr>
+      <tr>
+        <td>Art and design</td>
+        <td>2024-8-10</td>
+        <td>Westlands</td>
+        <tr>
+          <td>Charity Gala</td>
+          <td>2024-10-11</td>
+          <td>Kiambu</td>
+        </tr>
+        <tr>
+          <td>Food festival</td>
+          <td>2024-10-30</td>
+          <td>Kakamega</td>
+        </tr>
+        <tr>
+          <td>Education conference</td>
+          <td>2024-11-12</td>
+          <td>Limuru</td>
+        </tr>
+        <tr>
+          <td>Fitness Bootcamp</td>
+          <td>2024-12-12</td>
+          <td>Kilimani</td>
+        </tr>
+    </tbody>
+  </table>
+  <h2>Event with Most Attendees</h2>
+  <div id="mostAttendeesEvent"></div>
+
+  <h2>Add Attendee</h2>
+  <label for="eventTitle">Event Title:</label>
+  <input type="text" id="eventTitle">
+  <label for="attendeeName">Attendee Name:</label>
+  <input type="text" id="attendeeName">
+  <button onclick="addAttendeeToEvent()">Add Attendee</button>
+
+  <h2>Delete Event</h2>
+  <label for="deleteTitle">Event Title:</label>
+  <input type="text" id="deleteTitle">
+  <button onclick="deleteEventFromList()">Delete Event</button>
+
+  <script src="object.js"></script>
 </body>
 </html>
+<body>
+  
